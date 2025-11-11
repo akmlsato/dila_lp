@@ -1,0 +1,220 @@
+:root { 
+  --anakiwa: #90e4ff;
+  --bon-jour: #e4dfdf;
+  --btncolor: #eb835e;
+  --commonwhite: #ffffff;
+  --concrete: #f2f2f2;
+  --endeavour: #0060ad;
+  --errorlight: #e57373;
+  --flame-pea: #d96136;
+  --maincolor: #000000;
+  --navy-blue: #1b75ba;
+  --orange-red: #f7282b;
+  --textcolor: #171717;
+  --white: #ffffff;
+  --white-2: #ffffffcc;
+ 
+  --font-size-30px: 30px;
+  --font-size-36px: 36px;
+  --font-size-l: 16px;
+  --font-size-m: 14px;
+  --font-size-s: 12px;
+  --font-size-xl: 18px;
+  --font-size-xs: 10px;
+  --font-size-xxl: 20px;
+  --font-size-xxxl: 24px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-noto_sans_jp: "Noto Sans JP", Helvetica;
+
+  /* ▼ヘッダー関連追加変数 */
+  --header-h-mobile: 64px;
+  --header-h-desktop: 80px;
+}
+
+/* ▼ヘッダー固定設定 */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+}
+
+.header .headlogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: var(--header-h-mobile);
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .header .headlogo {
+    height: var(--header-h-desktop);
+    padding: 0 24px;
+  }
+}
+
+body {
+  padding-top: var(--header-h-mobile);
+}
+@media (min-width: 768px) {
+  body {
+    padding-top: var(--header-h-desktop);
+  }
+}
+
+/* アンカー位置のずれ対策 */
+#experience, #course, #experience-sp, #course-sp {
+  scroll-margin-top: var(--header-h-mobile);
+}
+@media (min-width: 768px) {
+  #experience, #course, #experience-sp, #course-sp {
+    scroll-margin-top: var(--header-h-desktop);
+  }
+}
+
+/* ▼ナビメニューがヘッダー下に出る場合 */
+.nav-menu, .global-nav, .drawer {
+  z-index: 999;
+}
+
+/* ▼文字スタイル類 */
+.h1-24b {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.h2-20b {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.h1-36b {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-36px);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.h2-30b {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-30px);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.inter12 {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.inter14 {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.inter14m {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.inter16 {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.inter18 {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.inter18m {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.inter18b {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.inter20m {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.inter24 {
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.notosansjp-normal-white-10px {
+  color: var(--commonwhite);
+  font-family: var(--font-family-noto_sans_jp);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-bold-white-14px {
+  color: var(--commonwhite);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-semi-bold-white-21-2px {
+  color: var(--commonwhite);
+  font-family: var(--font-family-inter);
+  font-size: 21.2px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.inter-medium-white-12px {
+  color: var(--commonwhite);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}

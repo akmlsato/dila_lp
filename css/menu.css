@@ -1,0 +1,217 @@
+/* ハンバーガーメニュー用CSS */
+
+/* メニューの表示/非表示を制御するチェックボックス(非表示) */
+#menu-toggle,
+#menu-toggle-pc {
+  display: none;
+}
+
+/* ハンバーガーアイコンのラベル */
+.menu-icon {
+  cursor: pointer;
+  position: relative;
+  z-index: 1101;
+  transition: opacity 0.3s ease;
+}
+
+/* チェックされた時にハンバーガーアイコンを非表示(スマホ・PC共通) */
+#menu-toggle:checked + .menu-icon,
+#menu-toggle-pc:checked + .menu-icon {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ナビゲーションメニューのスタイル */
+.nav-menu {
+  background-color: var(--commonwhite);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  position: fixed;
+  right: -300px;
+  top: 0;
+  transition: right 0.3s ease;
+  width: 300px;
+  z-index: 1100;
+}
+
+/* チェックボックスがチェックされた時にメニューを表示 */
+#menu-toggle:checked ~ .nav-menu,
+#menu-toggle-pc:checked ~ .nav-menu {
+  right: 0;
+}
+
+/* オーバーレイ */
+.menu-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1050;
+}
+
+#menu-toggle:checked ~ .menu-overlay,
+#menu-toggle-pc:checked ~ .menu-overlay {
+  display: block;
+}
+
+/* メニューの中身 */
+.nav-menu-content {
+  padding: 80px 24px 24px;
+}
+
+.nav-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu-item {
+  border-bottom: 1px solid var(--bon-jour);
+  padding-bottom: 16px;
+}
+
+.nav-menu-link {
+  color: var(--maincolor);
+  display: block;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-menu-link:hover {
+  color: var(--endeavour);
+}
+
+/* 閉じるボタン(スマホ・PC共通で表示) */
+.menu-close {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: var(--maincolor);
+  cursor: pointer;
+  display: flex;
+  font-size: 32px;
+  height: 40px;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 40px;
+  transition: opacity 0.2s ease;
+}
+
+.menu-close:hover {
+  opacity: 0.7;
+}
+
+/* スムーズスクロール */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* フォーム */
+
+.form-input {
+  width: 320px;
+  height: 18px;
+  font-size: 14px;
+  padding: 20px;
+  background-color: #F2F2F2;
+  border: 1px solid #a5a5a5;
+  border-radius: 8px;
+}
+.form-input-sp {
+  width: 280px;
+  height: 20px;
+  font-size: 14px;
+  padding: 20px;
+  background-color: #F2F2F2;
+  border: 1px solid #a5a5a5;
+  border-radius: 8px;
+}
+.form-inputmini {
+  width: 92px;
+  height: 20px;
+  font-size: 14px;
+  padding: 20px;
+  background-color: #F2F2F2;
+  border: 1px solid #a5a5a5;
+  border-radius: 8px;
+}
+.form-select {
+  width: 320px;
+  height: 48px; /* 高さを確保（任意） */
+  font-size: 14px;
+  padding: 12px 40px 12px 20px; /* 右に余白を多めに確保 */
+  background-color: #F2F2F2;
+  border: 1px solid #a5a5a5;
+  border-radius: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* ▼ カスタムアイコン */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 1L8 8L15 1" stroke="%23666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px 10px; /* ← 明示的にサイズ指定 */
+}
+.form-select-sp {
+  width: 280px;
+  height: 48px; /* 高さを確保（任意） */
+  font-size: 14px;
+  padding: 12px 40px 12px 20px; /* 右に余白を多めに確保 */
+  background-color: #F2F2F2;
+  border: 1px solid #a5a5a5;
+  border-radius: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* ▼ カスタムアイコン */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 1L8 8L15 1" stroke="%23666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px 10px; /* ← 明示的にサイズ指定 */
+}
+
+.btn-submit {
+  all: unset;
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #D96136;
+  color: #fff;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-submit:hover {
+  background-color: color-mix(in srgb, #D96136 85%, black);
+}
+
+
+
+/* PC版でメニューが確実に画面外に配置されるように */
+@media screen and (min-width: 1024px) {
+  .nav-menu {
+    right: -300px !important;
+  }
+  
+  #menu-toggle-pc:checked ~ .nav-menu {
+    right: 0 !important;
+  }
+}
